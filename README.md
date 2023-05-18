@@ -1,5 +1,5 @@
 # machine leaning
- Machine learning algorithm for training on breast cancer data
+ Machine learning model that trained on breast cancer data to predict th status of the patient
  
  # the project team
  محمود خالد محمد خيره<br>
