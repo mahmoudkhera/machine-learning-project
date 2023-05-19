@@ -35,7 +35,7 @@ print(dataset.groupby('status').size())
 
 # Split-out validation dataset
 array = dataset.values
-X = array[:,1:11]
+X = array[:,2:10]
 y = array[:,11]
 X_train, X_validation, Y_train, Y_validation = train_test_split(X, y, test_size=0.10, random_state=1)
 
@@ -60,17 +60,8 @@ for name, model in models:
  print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
  
  
- # Make predictions on validation dataset
-model = LogisticRegression()
-model.fit(X_train, Y_train)
-predictions = model.predict(X_validation)
 
 
-
-# Evaluate predictions
-print(accuracy_score(Y_validation, predictions))
-print(confusion_matrix(Y_validation, predictions))
-print(classification_report(Y_validation, predictions))
  
 
 
