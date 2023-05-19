@@ -35,7 +35,7 @@ print(dataset.groupby('status').size())
 
 # Split-out validation dataset
 array = dataset.values
-X = array[:,2:10]
+X = array[:,2:11]
 y = array[:,11]
 X_train, X_validation, Y_train, Y_validation = train_test_split(X, y, test_size=0.10, random_state=1)
 
